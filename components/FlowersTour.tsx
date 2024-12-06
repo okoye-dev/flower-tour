@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export type Flower = {
   id: number;
@@ -23,6 +24,7 @@ const FlowersTour: React.FC<FlowersTourProps> = ({ config }) => {
   const router = useRouter();
 
   const handleNext = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
     setImageLoaded(false); // Reset loading state for the next image
     if (currentIndex === config.length - 1) {
       return router.push("/end-of-tour");
@@ -45,7 +47,7 @@ const FlowersTour: React.FC<FlowersTourProps> = ({ config }) => {
       <div className="flex flex-col items-center justify-center min-h-screen px-4 gap-3 max-w-md z-20 transition-all duration-300">
         <motion.div
           key={currentFlower.id}
-          className={`rounded-[40px] overflow-hidden mb- ${
+          className={`rounded-[40px] overflow-hidden flex items-center justify-center relative ${
             !imageLoaded ? "bg-pink-200 animate-pulse" : ""
           }`}
           initial={{ opacity: 0, scale: 0.8 }}
@@ -61,6 +63,13 @@ const FlowersTour: React.FC<FlowersTourProps> = ({ config }) => {
             className="min-w-[22rem] h-80 object-cover"
             onLoad={() => setImageLoaded(true)}
           />
+
+          <Link
+            href={`https://www.pexels.com/search/${currentFlower.name}%20flower/`}
+            className="absolute bg-blue-200/30 bottom-3 right-3 p-3 rounded-full backdrop-blur-sm text-xs"
+          >
+            <Image src={"/images/arrow.svg"} alt="" width={20} height={20} />
+          </Link>
         </motion.div>
 
         <section className="flex flex-col gap-3 bg-pink-600/10 rounded-[40px] p-3 backdrop-blur-sm transition-all duration-300">
