@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Eagle_Lake, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
-export const eagle = Eagle_Lake({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
