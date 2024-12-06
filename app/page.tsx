@@ -19,7 +19,7 @@ export default function Home() {
           </p>
           <p className="text-white/50">Your tour awaits.</p>
           <div className="bg-pink-900 mt-3 text-xs border-pink-700 text-red-200 border p-2 rounded-xl">
-            Also, please don't suck the red out of our flowers.
+            Also, please don&apos;t suck the red out of our flowers.
           </div>
         </div>
 

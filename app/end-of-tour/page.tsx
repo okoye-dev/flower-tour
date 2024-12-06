@@ -19,7 +19,7 @@ const EndOfTour: React.FC = () => {
           enchanting world of flowers.
         </i>{" "}
         I hope you found a <i className="text-pink-600 font-semibold">bloom</i>{" "}
-        that resonates with your heart, my love. What's next?
+        that resonates with your heart, my love. What&apos;s next?
       </p>
 
       {/* Grid of Flowers */}

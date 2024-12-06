@@ -128,4 +128,3 @@ const FlowersTour: React.FC<FlowersTourProps> = ({ config }) => {
 };
 
 export default FlowersTour;
-4;
