@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        eagle: ["Eagle Lake", "cursive"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
